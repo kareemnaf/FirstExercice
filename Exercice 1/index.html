@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="divTable">
+      <div class="btnDiv">
+        <button class="btnAdd" id="btnAdd" onclick="openModal();"> Ajouter utilisateur</button>
+      </div>
+       
+      <div class="divTable2">
+        <div id="table">
+          <table id="myTable" class="table">
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>date de création</th>
+                <th>etat</th>
+                <th>nom</th>
+                <th>prénom</th>
+                <th>nom d'utilisateur</th>
+                <th>matricule</th>
+                <th>actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+          <!-- MODAL -->
+          <div id="modal">
+            <div class="">
+              <div class="">
+                <div class="header">
+                  <h3>Ajout d'utilisateurs</h3>
+                  <button onclick="closeModal();" class="btnClose">&times;</button>
+                </div>
+               <form>
+                <div class="form">
+                  <div class="wrap">
+                    <label>Nom</label>
+                    <input class="input" name="firstName" id="firstName" type="text" placeholder="Entrer nom">
+                    <span class="error"></span>
+                 </div>
+                 <div class="wrap">
+                    <label>Prénom</label>
+                    <input class="input" name="lastName" id="lastName" type="text" placeholder="Entrer prénom">
+                    <span class="error"></span>
+                  </div>
+                  <div class="wrap">
+                    <label>Etat</label>
+                    <select class="input" name="state" id="state">
+                      <option value="null">Entrer etat</option>
+                      <option value="En validation">En validation</option>
+                      <option value="Validé">Validé</option>
+                      <option value="Rejeté">Rejeté</option>
+                    </select>
+                    <span class="error"></span>
+                  </div>
+                </div>
+                  <div class="form">
+                    <div class="wrap">
+                      <label>Nom d'utilisateur</label>
+                      <input class="input" name="userName" id="userName" type="text" placeholder="Entrer nom d'utilisateur">
+                      <span class="error"></span>
+                    </div>
+                    <div class="wrap">
+                      <label>Date de création</label>
+                      <input class="input" name="createdDate" id="createdDate" type="date" placeholder="Entrer date de création">
+                      <span class="error"></span>
+                    </div>
+                  </div>
+                  <div class="form">
+                    <div class="wrap">
+                      <label>Matricule</label>
+                      <input class="input" name="registrationNumber" id="registrationNumber" type="number" placeholder="Entrer matricule">
+                      <span class="error"></span>
+                    </div>
+                    <div class="wrap">
+                      <label>Id</label>
+                      <input class="input" name="id" id="id" type="number" placeholder="Entrer id">
+                      <span class="error"></span>
+                    </div>
+                  </div>
+                  <button class="btnSave" type="submit"> Enregistrer</button>
+               </form>
+              </div>
+            </div>
+          </div>
+          <!-- END MODAL -->
+      </div>
+
+      <script src="index.js"></script>
+</body>
+</html>
